@@ -1,0 +1,303 @@
+
+
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body{
+    border-top: 15px solid #D0D0D0;
+    border-right: 20px solid #D0D0D0;
+    border-bottom: 20px solid #D0D0D0;
+    border-left: 17px solid #D0D0D0;
+    height: 100%;
+    background-color: #D0D0D0;
+    position: relative;
+}
+
+body{
+  font-family: helvetica;
+  font-size:16px;
+}
+
+/* Global styles */
+main{
+  display: flex;
+  flex-flow: wrap;
+}
+
+article{
+  height: 20vh;
+  padding:40px 25px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#fff; 
+  overflow: hidden;
+  cursor: pointer;
+}
+
+article h3{
+  margin: 20px 0 0 0;
+  letter-spacing: 2px;
+  font-size: 1em;
+}
+
+header {
+  color: #FBFEFF;
+  display: flex;
+  flex-direction: column;
+}
+
+header article{
+  width:100%;
+}
+
+.banner {
+  background:url('images/aurora.jpg') no-repeat;
+  background-position: -455px -500px;
+  order: 1; 
+  display: block;
+  height: 33.4vh;
+}
+
+.gallery {
+  background-color: #000;
+  padding: 0;
+  order: 2; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 20vh;
+}
+
+#right-arrow,
+#left-arrow {
+  position: absolute;
+  z-index: 5;
+  height: 3vh;
+  cursor: pointer;
+  width: 30px;
+}
+
+#right-arrow {
+  top:50%;
+  right:20px;
+}
+
+#left-arrow {
+  top:50%;
+  left:20px;
+  transform: rotate(180deg);
+}
+
+.gallery img {
+  width: 200vh;
+  margin:0;
+}
+
+.gallery ul {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.gallery ul li{
+  background-color: #fff;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 2px;
+  opacity: .4;
+}
+
+.gallery ul li:nth-child(1) {
+    opacity: 1;
+}
+
+header h1{
+  margin: 6px 0 19px 0;
+  font-size: 27px;
+  min-width: 245px;
+  font-weight: normal;
+}
+
+header h2{
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 21px;
+}
+
+header button{
+  background: unset;
+  border: 3px solid #FBFEFF;
+  font-size: 1em;
+  color: #FBFEFF;
+  margin-right: 5px;
+  margin-left: 4px;
+  padding: 11px 15px;
+  cursor: pointer;
+  width: 121px;/*
+  transition: all .2s ease-out;
+  opacity: .8;*/
+}
+
+header button:hover{
+  background: #fff;
+  color: #000;
+  opacity: 1;
+}
+
+article img {
+  width: 8vh;/*
+  margin-bottom: -100px;
+  transition: .3s ease-in-out, opacity .3s ease-out;
+  opacity: 0;*/
+}
+
+.why {
+  background-color: #1A1440;
+  order: 3; 
+}
+
+.who {
+  background-color: #4A6D8C;
+}
+
+.how {
+  background-color: #D97044;
+}
+
+.what {
+  background-color: #A61717; 
+}
+
+.types {
+  background-color: #04D9D9;
+}
+
+.where {
+  background-color: #1A1440;
+}
+
+.contact{
+  background-color: #4A6D8C;
+}
+
+@media(min-width:510px) {
+  
+  header {
+  flex-direction: row;
+  flex-flow: wrap;
+  }
+
+  header button{
+    width:100px;
+  }
+
+  .banner {
+    width: 60%;
+  }
+
+  .why {
+    order: 2;
+    width: 40%;
+    height: 33.4vh;
+  }
+
+  .gallery {
+    width: 100%;
+    height: 33.4vh;
+    order: 3;
+  }
+
+  .gallery img {
+    width: 100vh;
+  }
+
+  main { 
+    display: flex;
+    flex-flow: wrap; 
+  }
+
+  main article {
+    width: 50%;
+    height: 30vh;
+  }
+
+}
+
+@media(min-width:750px) {
+  main article {
+    width: 33.33%;
+    height: 30vh;
+  }
+
+  header button{
+    width:121px;
+  }
+
+  .gallery img {
+    width: 150vh;
+  }
+}
+
+@media(min-width:1000px) {
+  body{
+    position: relative;
+  }
+
+  header button{
+    width:121px;
+  }
+
+  .banner {
+    width: 40%;
+    height: 32vh;
+  }
+  .why {
+    order: 2;
+    width: 19.5%;
+    height: 32vh;
+  }
+  .gallery {
+    position: absolute;
+    width: 40.5%;
+    height: 96vh;
+    right: 0;
+    z-index: -1;
+    padding: 15px 20px 0 0;
+  }
+
+  .gallery ul {
+    top: 20px;
+    right: 30px;
+  }
+
+  .gallery img {
+    width: 200vh;
+  }
+
+  main{
+    width:60%;
+  }
+
+  main article {
+    width: 33.33%;
+    height: 32vh;
+    position: relative;
+    z-index: -3;
+  }
+
+  #left-arrow {
+    right:40px;
+  }
+}
