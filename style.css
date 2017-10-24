@@ -192,6 +192,13 @@ article img {
   background-color: #4A6D8C;
 }
 
+
+@media(min-width:350px) {
+  header button{
+    width:90px;
+  }
+}
+
 @media(min-width:510px) {
   
   header {
