@@ -15,12 +15,10 @@ body{
     height: 100%;
     background-color: #D0D0D0;
     position: relative;
+    font-family: helvetica;
+    font-size:16px;
 }
 
-body{
-  font-family: helvetica;
-  font-size:16px;
-}
 
 /* Global styles */
 main{
@@ -145,7 +143,7 @@ header button{
   margin-left: 4px;
   padding: 11px 15px;
   cursor: pointer;
-  width: 121px;/*
+  width: 80px;/*
   transition: all .2s ease-out;
   opacity: .8;*/
 }
@@ -193,9 +191,10 @@ article img {
 }
 
 
-@media(min-width:350px) {
+@media(max-width:350px) {
   header button{
-    width:90px;
+    width: 100px;
+    padding: 5px;
   }
 }
 
