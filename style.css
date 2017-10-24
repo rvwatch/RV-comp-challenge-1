@@ -185,7 +185,7 @@ article img {
 }
 
 
-@media(max-width:350px) {
+@media(min-width:350px) {
   header button{
     padding: 5px;
   }
